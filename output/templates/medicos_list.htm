@@ -1168,22 +1168,25 @@
 	{$cell_grid_cell_dpreview}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+					"
 
 	
 	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-			<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="citas"
-			data-details-citas	>
+				<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="citas,Citas_Asignadas"
+			data-details-citas			data-details-Citas_Asignadas	>
 		<span data-details-inside data-short-table="citas">
+			</span>
+		<span data-details-inside data-short-table="Citas_Asignadas">
 			</span>
 		<div data-details-preview>
 	</div>
 </div>
-	
+	 
+			
 	</td>
 	{END cellblock_grid_cell_dpreview}
 							</tr>

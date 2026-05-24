@@ -632,6 +632,7 @@ $tableCaptions["Spanish"]["usuarios"] = "Usuarios";
 $tableCaptions["Spanish"]["admin_rights"] = "Admin Rights";
 $tableCaptions["Spanish"]["admin_members"] = "Admin Members";
 $tableCaptions["Spanish"]["admin_users"] = "Add/Edit users";
+$tableCaptions["Spanish"]["Citas_Asignadas"] = "Citas Asignadas";
 
 
 $globalEvents = new class_GlobalEvents;

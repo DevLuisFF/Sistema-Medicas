@@ -20,6 +20,7 @@ $nonAdminTablesArr[] = "especialidades";
 $nonAdminTablesArr[] = "medicos";
 $nonAdminTablesArr[] = "pacientes";
 $nonAdminTablesArr[] = "usuarios";
+$nonAdminTablesArr[] = "Citas Asignadas";
 
 $ug_connection = $cman->getForUserGroups();
 

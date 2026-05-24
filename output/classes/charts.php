@@ -503,6 +503,8 @@ class Chart
 			return true;
 		if("usuarios" == $this->chrt_array['tables'][0])
 			return true;
+		if("citas" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 	

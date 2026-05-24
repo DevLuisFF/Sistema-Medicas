@@ -1,5 +1,7 @@
 <?php
 			$optionsArray = array( 'details' => array( 'citas' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'Citas Asignadas' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'master' => array( 'especialidades' => array( 'preview' => false ) ),
 'fields' => array( 'gridFields' => array( 'id_medico',

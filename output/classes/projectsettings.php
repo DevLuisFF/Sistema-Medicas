@@ -2900,6 +2900,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "admin_members" ] = "admin_members";
 	$projectEntities[ "admin_users" ] = array( "url" => "admin_users", "type" => 1 );
 	$projectEntitiesReverse[ "admin_users" ] = "admin_users";
+	$projectEntities[ "Citas Asignadas" ] = array( "url" => "Citas_Asignadas", "type" => 1 );
+	$projectEntitiesReverse[ "Citas_Asignadas" ] = "Citas Asignadas";
 }
 
 function findTable( $table ) {

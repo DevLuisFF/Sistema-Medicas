@@ -12,9 +12,9 @@ $tdatapacientes[".searchableFields"] = array();
 	$tdatapacientes[".OriginalTable"] = "pacientes";
 
 
-$defaultPages = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$defaultPages = my_json_decode( "{\"add\":\"add\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 
-$tdatapacientes[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatapacientes[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatapacientes[".defaultPages"] = $defaultPages;
 
 //	field labels
@@ -261,7 +261,6 @@ $tdatapacientes[".arrGroupsPerPage"] = $arrGPP;
 $tdatapacientes[".highlightSearchResults"] = true;
 
 $tableKeyspacientes = array();
-$tableKeyspacientes[] = "id_paciente";
 $tdatapacientes[".Keys"] = $tableKeyspacientes;
 
 
@@ -1288,6 +1287,35 @@ $detailsTablesData["pacientes"] = array();
 				$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "citas";
 	$detailsParam["dCaptionTable"] = GetTableCaption("citas");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["pacientes"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["pacientes"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["pacientes"][$dIndex]["masterKeys"][]="id_paciente";
+
+				$detailsTablesData["pacientes"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["pacientes"][$dIndex]["detailKeys"][]="id_paciente";
+//	Citas Asignadas
+	
+	
+
+		$dIndex = 1;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="Citas Asignadas";
+		$detailsParam["dOriginalTable"] = "citas";
+
+
+	
+				$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "Citas_Asignadas";
+	$detailsParam["dCaptionTable"] = GetTableCaption("Citas_Asignadas");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

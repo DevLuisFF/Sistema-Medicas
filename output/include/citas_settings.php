@@ -8,7 +8,7 @@ $tdatacitas[".searchableFields"] = array();
 	$tdatacitas[".truncateText"] = true;
 	$tdatacitas[".NumberOfChars"] = 80;
 	$tdatacitas[".ShortName"] = "citas";
-	$tdatacitas[".OwnerID"] = "";
+	$tdatacitas[".OwnerID"] = "id_cita";
 	$tdatacitas[".OriginalTable"] = "citas";
 
 
@@ -75,9 +75,9 @@ if(mlang_getcurrentlang()=="Spanish")
 
 
 $tdatacitas[".shortTableName"] = "citas";
-$tdatacitas[".nSecOptions"] = 0;
+$tdatacitas[".nSecOptions"] = 1;
 
-$tdatacitas[".mainTableOwnerID"] = "";
+$tdatacitas[".mainTableOwnerID"] = "id_cita";
 $tdatacitas[".entityType"] = 0;
 
 $tdatacitas[".strOriginalTableName"] = "citas";
@@ -463,40 +463,12 @@ $tdatacitas[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Lookup wizard");
+	$edata = array("EditFormat" => "Text field");
 
 	
 	
 	
 
-// Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "pacientes";
-		$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-		
-	$edata["LinkField"] = "id_paciente";
-	$edata["LinkFieldType"] = 3;
-	$edata["DisplayField"] = "id_paciente";
-
-	
-
-	
-	$edata["LookupOrderBy"] = "";
-
-	
-	
-	
-	
-
-	
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -511,14 +483,17 @@ $tdatacitas[".hideMobileList"] = array();
 	
 	
 	
-	
-	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	

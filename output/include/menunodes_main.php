@@ -112,7 +112,7 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["parent"] = "0";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
-	$menuNode["pageType"] = "List";//
+	$menuNode["pageType"] = "Search";//
 	$menuNode["openType"] = "None";
 	
 	$menuNode["icon"] = "";
@@ -121,6 +121,30 @@ function getMenuNodes_main($menuNodesObject)
 			$menuNode["color"] = "";
 	
 	$menuNode["title"] = "Usuarios";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "6";
+	$menuNode["name"] = "";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "Citas Asignadas";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = "List";//
+	$menuNode["openType"] = "None";
+	
+	$menuNode["icon"] = "";
+	$menuNode["iconType"] = "0";
+
+			$menuNode["color"] = "";
+	
+	$menuNode["title"] = "Citas Asignadas";
 
 
 

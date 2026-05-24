@@ -104,138 +104,366 @@
 
 {END id_paciente_fieldblock}
 											
-{BEGIN nombre_fieldblock}
+{BEGIN id_cita_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_nombre}  r-vertical-field" data-fieldname="nombre" data-signal-error-for="nombre{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="nombre" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_cita}  r-vertical-field" data-fieldname="id_cita" data-signal-error-for="id_cita{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="id_cita" >
 
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_nombre}">
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_id_cita}">
 		
-		{BEGIN nombre_label}{$label pacientes nombre }{END nombre_label}
+		{BEGIN id_cita_label}{$label pacientes id_cita }{END id_cita_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
-		{$nombre_value}	</div>
+		{$id_cita_value}	</div>
 
 		
 </div>
 
 
-{END nombre_fieldblock}
+{END id_cita_fieldblock}
 											
-{BEGIN apellido_fieldblock}
+{BEGIN fecha_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_apellido}  r-vertical-field" data-fieldname="apellido" data-signal-error-for="apellido{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="apellido" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fecha}  r-vertical-field" data-fieldname="fecha" data-signal-error-for="fecha{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="fecha" >
 
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_apellido}">
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_fecha}">
 		
-		{BEGIN apellido_label}{$label pacientes apellido }{END apellido_label}
+		{BEGIN fecha_label}{$label pacientes fecha }{END fecha_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
-		{$apellido_value}	</div>
+		{$fecha_value}	</div>
 
 		
 </div>
 
 
-{END apellido_fieldblock}
+{END fecha_fieldblock}
 											
-{BEGIN fecha_nacimiento_fieldblock}
+{BEGIN hora_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_fecha_nacimiento}  r-vertical-field" data-fieldname="fecha_nacimiento" data-signal-error-for="fecha_nacimiento{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="fecha_nacimiento" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_hora}  r-vertical-field" data-fieldname="hora" data-signal-error-for="hora{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="hora" >
 
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_fecha_nacimiento}">
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_hora}">
 		
-		{BEGIN fecha_nacimiento_label}{$label pacientes fecha_nacimiento }{END fecha_nacimiento_label}
+		{BEGIN hora_label}{$label pacientes hora }{END hora_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
-		{$fecha_nacimiento_value}	</div>
+		{$hora_value}	</div>
 
 		
 </div>
 
 
-{END fecha_nacimiento_fieldblock}
+{END hora_fieldblock}
 											
-{BEGIN telefono_fieldblock}
+{BEGIN estado_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_telefono}  r-vertical-field" data-fieldname="telefono" data-signal-error-for="telefono{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="telefono" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_estado}  r-vertical-field" data-fieldname="estado" data-signal-error-for="estado{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="estado" >
 
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_telefono}">
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_estado}">
 		
-		{BEGIN telefono_label}{$label pacientes telefono }{END telefono_label}
+		{BEGIN estado_label}{$label pacientes estado }{END estado_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
-		{$telefono_value}	</div>
+		{$estado_value}	</div>
 
 		
 </div>
 
 
-{END telefono_fieldblock}
+{END estado_fieldblock}
 											
-{BEGIN email_fieldblock}
+{BEGIN motivo_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_email}  r-vertical-field" data-fieldname="email" data-signal-error-for="email{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="email" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_motivo}  r-vertical-field" data-fieldname="motivo" data-signal-error-for="motivo{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="motivo" >
 
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_email}">
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_motivo}">
 		
-		{BEGIN email_label}{$label pacientes email }{END email_label}
+		{BEGIN motivo_label}{$label pacientes motivo }{END motivo_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
-		{$email_value}	</div>
+		{$motivo_value}	</div>
 
 		
 </div>
 
 
-{END email_fieldblock}
+{END motivo_fieldblock}
 											
-{BEGIN direccion_fieldblock}
+{BEGIN diagnostico_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_direccion}  r-vertical-field" data-fieldname="direccion" data-signal-error-for="direccion{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="direccion" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_diagnostico}  r-vertical-field" data-fieldname="diagnostico" data-signal-error-for="diagnostico{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="diagnostico" >
 
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_direccion}">
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_diagnostico}">
 		
-		{BEGIN direccion_label}{$label pacientes direccion }{END direccion_label}
+		{BEGIN diagnostico_label}{$label pacientes diagnostico }{END diagnostico_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
-		{$direccion_value}	</div>
+		{$diagnostico_value}	</div>
 
 		
 </div>
 
 
-{END direccion_fieldblock}
+{END diagnostico_fieldblock}
 											
-{BEGIN activo_fieldblock}
+{BEGIN tratamiento_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_activo}  r-vertical-field" data-fieldname="activo" data-signal-error-for="activo{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="activo" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_tratamiento}  r-vertical-field" data-fieldname="tratamiento" data-signal-error-for="tratamiento{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="tratamiento" >
 
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_activo}">
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_tratamiento}">
 		
-		{BEGIN activo_label}{$label pacientes activo }{END activo_label}
+		{BEGIN tratamiento_label}{$label pacientes tratamiento }{END tratamiento_label}
 	</label>
 	<div class="col-md-offset-3 col-md-6" >
-		{$activo_value}	</div>
+		{$tratamiento_value}	</div>
 
 		
 </div>
 
 
-{END activo_fieldblock}
+{END tratamiento_fieldblock}
+											
+{BEGIN receta_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_receta}  r-vertical-field" data-fieldname="receta" data-signal-error-for="receta{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="receta" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_receta}">
+		
+		{BEGIN receta_label}{$label pacientes receta }{END receta_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$receta_value}	</div>
+
+		
+</div>
+
+
+{END receta_fieldblock}
+											
+{BEGIN notas_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_notas}  r-vertical-field" data-fieldname="notas" data-signal-error-for="notas{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="notas" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_notas}">
+		
+		{BEGIN notas_label}{$label pacientes notas }{END notas_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$notas_value}	</div>
+
+		
+</div>
+
+
+{END notas_fieldblock}
+											
+{BEGIN created_at_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_created_at}  r-vertical-field" data-fieldname="created_at" data-signal-error-for="created_at{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="created_at" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_created_at}">
+		
+		{BEGIN created_at_label}{$label pacientes created_at }{END created_at_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$created_at_value}	</div>
+
+		
+</div>
+
+
+{END created_at_fieldblock}
+											
+{BEGIN paciente_nombre_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_paciente_nombre}  r-vertical-field" data-fieldname="paciente_nombre" data-signal-error-for="paciente_nombre{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="paciente_nombre" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_paciente_nombre}">
+		
+		{BEGIN paciente_nombre_label}{$label pacientes paciente_nombre }{END paciente_nombre_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$paciente_nombre_value}	</div>
+
+		
+</div>
+
+
+{END paciente_nombre_fieldblock}
+											
+{BEGIN paciente_telefono_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_paciente_telefono}  r-vertical-field" data-fieldname="paciente_telefono" data-signal-error-for="paciente_telefono{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="paciente_telefono" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_paciente_telefono}">
+		
+		{BEGIN paciente_telefono_label}{$label pacientes paciente_telefono }{END paciente_telefono_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$paciente_telefono_value}	</div>
+
+		
+</div>
+
+
+{END paciente_telefono_fieldblock}
+											
+{BEGIN paciente_email_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_paciente_email}  r-vertical-field" data-fieldname="paciente_email" data-signal-error-for="paciente_email{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="paciente_email" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_paciente_email}">
+		
+		{BEGIN paciente_email_label}{$label pacientes paciente_email }{END paciente_email_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$paciente_email_value}	</div>
+
+		
+</div>
+
+
+{END paciente_email_fieldblock}
+											
+{BEGIN id_medico_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_medico}  r-vertical-field" data-fieldname="id_medico" data-signal-error-for="id_medico{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="id_medico" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_id_medico}">
+		
+		{BEGIN id_medico_label}{$label pacientes id_medico }{END id_medico_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$id_medico_value}	</div>
+
+		
+</div>
+
+
+{END id_medico_fieldblock}
+											
+{BEGIN medico_nombre_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_medico_nombre}  r-vertical-field" data-fieldname="medico_nombre" data-signal-error-for="medico_nombre{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field15" {$item_integrated_edit_field15} data-pageid="{$pageid}" data-field="medico_nombre" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_medico_nombre}">
+		
+		{BEGIN medico_nombre_label}{$label pacientes medico_nombre }{END medico_nombre_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$medico_nombre_value}	</div>
+
+		
+</div>
+
+
+{END medico_nombre_fieldblock}
+											
+{BEGIN medico_telefono_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_medico_telefono}  r-vertical-field" data-fieldname="medico_telefono" data-signal-error-for="medico_telefono{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field16" {$item_integrated_edit_field16} data-pageid="{$pageid}" data-field="medico_telefono" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_medico_telefono}">
+		
+		{BEGIN medico_telefono_label}{$label pacientes medico_telefono }{END medico_telefono_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$medico_telefono_value}	</div>
+
+		
+</div>
+
+
+{END medico_telefono_fieldblock}
+											
+{BEGIN medico_email_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_medico_email}  r-vertical-field" data-fieldname="medico_email" data-signal-error-for="medico_email{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field17" {$item_integrated_edit_field17} data-pageid="{$pageid}" data-field="medico_email" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_medico_email}">
+		
+		{BEGIN medico_email_label}{$label pacientes medico_email }{END medico_email_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$medico_email_value}	</div>
+
+		
+</div>
+
+
+{END medico_email_fieldblock}
+											
+{BEGIN id_especialidad_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_especialidad}  r-vertical-field" data-fieldname="id_especialidad" data-signal-error-for="id_especialidad{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field18" {$item_integrated_edit_field18} data-pageid="{$pageid}" data-field="id_especialidad" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_id_especialidad}">
+		
+		{BEGIN id_especialidad_label}{$label pacientes id_especialidad }{END id_especialidad_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$id_especialidad_value}	</div>
+
+		
+</div>
+
+
+{END id_especialidad_fieldblock}
+											
+{BEGIN especialidad_nombre_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_especialidad_nombre}  r-vertical-field" data-fieldname="especialidad_nombre" data-signal-error-for="especialidad_nombre{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field19" {$item_integrated_edit_field19} data-pageid="{$pageid}" data-field="especialidad_nombre" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_especialidad_nombre}">
+		
+		{BEGIN especialidad_nombre_label}{$label pacientes especialidad_nombre }{END especialidad_nombre_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$especialidad_nombre_value}	</div>
+
+		
+</div>
+
+
+{END especialidad_nombre_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

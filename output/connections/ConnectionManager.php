@@ -324,6 +324,7 @@ class ConnectionManager
 		$connectionsIds["usuarios"] = "citas_medicas_at_localhost";
 		$connectionsIds["admin_members"] = "citas_medicas_at_localhost";
 		$connectionsIds["admin_users"] = "citas_medicas_at_localhost";
+		$connectionsIds["Citas Asignadas"] = "citas_medicas_at_localhost";
 		$this->_tablesConnectionIds = $connectionsIds;
 	}
 	

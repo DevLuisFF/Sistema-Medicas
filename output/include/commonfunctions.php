@@ -285,6 +285,8 @@ function checkTableName($shortTName, $type=false)
 		return true;
 	if ("admin_users" == $shortTName && ($type===false || ($type!==false && $type == 1)))
 		return true;
+	if ("Citas_Asignadas" == $shortTName && ($type===false || ($type!==false && $type == 1)))
+		return true;
 	return false;
 }
 
@@ -374,6 +376,11 @@ function GetTablesList($pdfMode = false)
 	{
 		$arr[]="admin_users";
 	}
+	$strPerm = GetUserPermissions("Citas Asignadas");
+	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
+	{
+		$arr[]="Citas Asignadas";
+	}
 	return $arr;
 }
 
@@ -391,6 +398,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="usuarios";
 	$arr[]="admin_members";
 	$arr[]="admin_users";
+	$arr[]="Citas Asignadas";
 	return $arr;
 }
 
@@ -1257,6 +1265,9 @@ function SetAuthSessionData($pUsername, &$data, $fromFacebook, $password, &$page
 	$_SESSION["GroupID"] = $data["username"];
 
 
+		$_SESSION["OwnerID"] = $data["id_medico"];
+	$_SESSION["_citas_OwnerID"] = $data["id_medico"];
+		$_SESSION["_Citas Asignadas_OwnerID"] = $data["id_medico"];
 
 	$_SESSION["UserData"] = $data;
 
@@ -1315,6 +1326,18 @@ function CheckSecurity($strValue, $strAction, $table = "")
 	$strPerm = GetUserPermissions();
 	if( strpos($strPerm, "M") === false )
 	{
+		if($table=="citas")
+		{
+
+				if(!($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
+				return false;
+		}
+		if($table=="Citas Asignadas")
+		{
+
+				if(!($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
+				return false;
+		}
 	}
 	//	 check user group permissions
 	$localAction = strtolower($strAction);
@@ -1385,6 +1408,14 @@ function SecuritySQL($strAction, $table="", $strPerm="")
 
 	if(strpos($strPerm,"M")===false)
 	{
+		if($table=="citas")
+		{
+				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
+		}
+		if($table=="Citas Asignadas")
+		{
+				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
+		}
 	}
 
 	if($strAction=="Edit" && !(strpos($strPerm, "E")===false) ||

@@ -1,5 +1,7 @@
 <?php
 			$optionsArray = array( 'details' => array( 'citas' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'Citas Asignadas' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'master' => array( 'especialidades' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
