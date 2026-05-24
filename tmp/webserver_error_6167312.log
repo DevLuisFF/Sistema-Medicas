@@ -1,0 +1,11 @@
+[Sun May 24 14:06:28.956393 2026] [core:warn] [pid 8124:tid 584] AH00117: Ignoring deprecated use of DefaultType in line 21 of C:/Users/Luis/Documents/PHPRunnerProjects/Citas Medicas/tmp/webserver.conf.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::1744:759d:24e0:1338. Set the 'ServerName' directive globally to suppress this message
+[Sun May 24 14:06:29.491604 2026] [mpm_winnt:notice] [pid 8124:tid 584] AH00455: Apache/2.4.10 (Win32) PHP/5.5.18 configured -- resuming normal operations
+[Sun May 24 14:06:29.491604 2026] [mpm_winnt:notice] [pid 8124:tid 584] AH00456: Apache Lounge VC11 Server built: Jul 17 2014 11:50:08
+[Sun May 24 14:06:29.492645 2026] [core:notice] [pid 8124:tid 584] AH00094: Command line: 'C:\\Program Files\\PHPRunner10.0\\EmbeddedServer\\bin\\httpd.exe -d C:/Program Files/PHPRunner10.0/EmbeddedServer -d C:\\Program Files\\PHPRunner10.0\\EmbeddedServer -f C:\\Users\\Luis\\Documents\\PHPRunnerProjects\\Citas Medicas\\tmp\\webserver.conf'
+[Sun May 24 14:06:29.494605 2026] [mpm_winnt:notice] [pid 8124:tid 584] AH00418: Parent: Created child process 144
+[Sun May 24 14:06:29.781134 2026] [core:warn] [pid 144:tid 604] AH00117: Ignoring deprecated use of DefaultType in line 21 of C:/Users/Luis/Documents/PHPRunnerProjects/Citas Medicas/tmp/webserver.conf.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::1744:759d:24e0:1338. Set the 'ServerName' directive globally to suppress this message
+[Sun May 24 14:06:29.800659 2026] [core:warn] [pid 144:tid 604] AH00117: Ignoring deprecated use of DefaultType in line 21 of C:/Users/Luis/Documents/PHPRunnerProjects/Citas Medicas/tmp/webserver.conf.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::1744:759d:24e0:1338. Set the 'ServerName' directive globally to suppress this message
+[Sun May 24 14:06:29.815659 2026] [mpm_winnt:notice] [pid 144:tid 604] AH00354: Child: Starting 64 worker threads.
