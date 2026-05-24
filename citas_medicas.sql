@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 24, 2026 at 07:03 PM
+-- Generation Time: May 24, 2026 at 07:17 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -99,6 +99,13 @@ CREATE TABLE `usuarios` (
   `id_medico` int(11) DEFAULT NULL,
   `activo` tinyint(1) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
+--
+-- Dumping data for table `usuarios`
+--
+
+INSERT INTO `usuarios` (`id_usuario`, `username`, `password_hash`, `id_medico`, `activo`) VALUES
+(0, 'admin', 'admin', NULL, 1);
 
 --
 -- Indexes for dumped tables
