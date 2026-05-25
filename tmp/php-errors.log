@@ -1,0 +1,7 @@
+[24-May-2026 18:01:01 America/New_York] PHP Fatal error:  Call to undefined method SearchClause::setSQLCommand() in C:\Users\Luis\Documents\PHPRunnerProjects\Citas Medicas\output\include\medicos_events.php on line 99
+[24-May-2026 20:12:25 America/New_York] PHP Fatal error:  Call to undefined method SearchClause::setQuery() in C:\Users\Luis\Documents\PHPRunnerProjects\Citas Medicas\output\include\medicos_events.php on line 97
+[24-May-2026 20:13:51 America/New_York] PHP Fatal error:  Call to a member function fetchAssoc() on a non-object in C:\Users\Luis\Documents\PHPRunnerProjects\Citas Medicas\output\classes\listpage.php on line 1663
+[24-May-2026 20:14:35 America/New_York] PHP Fatal error:  Call to a member function fetchAssoc() on a non-object in C:\Users\Luis\Documents\PHPRunnerProjects\Citas Medicas\output\classes\listpage.php on line 1663
+[24-May-2026 20:15:26 America/New_York] PHP Fatal error:  Call to a member function fetchAssoc() on a non-object in C:\Users\Luis\Documents\PHPRunnerProjects\Citas Medicas\output\classes\listpage.php on line 1663
+[24-May-2026 20:16:54 America/New_York] PHP Fatal error:  Call to a member function fetchAssoc() on a non-object in C:\Users\Luis\Documents\PHPRunnerProjects\Citas Medicas\output\classes\listpage.php on line 1663
+[24-May-2026 20:19:20 America/New_York] PHP Fatal error:  Call to undefined method SearchClause::setSQL() in C:\Users\Luis\Documents\PHPRunnerProjects\Citas Medicas\output\include\medicos_events.php on line 101

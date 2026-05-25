@@ -16,7 +16,7 @@ $cipherer = new RunnerCipherer( $strTableName );
 $pSet = new ProjectSettings( $strTableName, $pageType, $page );
 
 
-if( $strTableName != "usuarios" )
+if( $strTableName != "admin_members" )
 {
 	if( !isLogged() ) 
 		return;

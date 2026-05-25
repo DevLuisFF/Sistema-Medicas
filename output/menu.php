@@ -84,6 +84,8 @@ $page_layouts["menu"] = $layout;
 require_once('include/xtempl.php');
 require_once(getabspath("classes/cipherer.php"));
 
+include_once(getabspath("include/medicos_events.php"));
+$tableEvents["medicos"] = new eventclass_medicos;
 
 $xt = new Xtempl();
 

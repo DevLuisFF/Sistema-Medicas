@@ -1203,35 +1203,6 @@ $detailsTablesData["medicos"] = array();
 				$detailsTablesData["medicos"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["medicos"][$dIndex]["detailKeys"][]="id_medico";
-//	Citas Asignadas
-	
-	
-
-		$dIndex = 1;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="Citas Asignadas";
-		$detailsParam["dOriginalTable"] = "citas";
-
-
-	
-				$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "Citas_Asignadas";
-	$detailsParam["dCaptionTable"] = GetTableCaption("Citas_Asignadas");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["medicos"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["medicos"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["medicos"][$dIndex]["masterKeys"][]="id_medico";
-
-				$detailsTablesData["medicos"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["medicos"][$dIndex]["detailKeys"][]="id_medico";
 
 // tables which are master tables for current table (detail)
 $masterTablesData["medicos"] = array();
@@ -1466,7 +1437,8 @@ $queryData_medicos = createSqlQuery_medicos();
 
 $tdatamedicos[".sqlquery"] = $queryData_medicos;
 
-$tableEvents["medicos"] = new eventsBase;
-$tdatamedicos[".hasEvents"] = false;
+include_once(getabspath("include/medicos_events.php"));
+$tableEvents["medicos"] = new eventclass_medicos;
+$tdatamedicos[".hasEvents"] = true;
 
 ?>

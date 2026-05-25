@@ -110,29 +110,6 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN id_paciente_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_id_paciente}  r-vertical-field" 
-	data-fieldname="id_paciente" 
-	data-signal-error-for="id_paciente{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="id_paciente" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_id_paciente}">
-		{BEGIN id_paciente_label}{$label pacientes id_paciente }{END id_paciente_label}
-	</label>
-	<div class="r-edit-field">
-		{$id_paciente_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="id_paciente">
-		<div class="text-muted" >
-				</div>
-	</div>
-</div>
-
-
-{END id_paciente_fieldblock}
-											
 {BEGIN nombre_fieldblock}
 
 
@@ -270,29 +247,6 @@
 
 
 {END direccion_fieldblock}
-											
-{BEGIN activo_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_activo}  r-vertical-field" 
-	data-fieldname="activo" 
-	data-signal-error-for="activo{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="activo" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_activo}">
-		{BEGIN activo_label}{$label pacientes activo }{END activo_label}
-	</label>
-	<div class="r-edit-field">
-		{$activo_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="activo">
-		<div class="text-muted" >
-				</div>
-	</div>
-</div>
-
-
-{END activo_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

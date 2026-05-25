@@ -322,19 +322,11 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="usuarios")
-		{
-			return false;
-		}
 		if($table=="admin_members")
 		{
 			return false;
 		}
 		if($table=="admin_users")
-		{
-			return false;
-		}
-		if($table=="Citas Asignadas")
 		{
 			return false;
 		}
@@ -666,19 +658,11 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="usuarios")
-		{
-			return false;
-		}
 		if($table=="admin_members")
 		{
 			return false;
 		}
 		if($table=="admin_users")
-		{
-			return false;
-		}
-		if($table=="Citas Asignadas")
 		{
 			return false;
 		}

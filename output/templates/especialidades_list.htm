@@ -273,20 +273,7 @@
 				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
 		</div>
 		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_id_especialidad}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_id_especialidad}" {$filterRow_attrs_id_especialidad}>
-			<label>{$label especialidades id_especialidad }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_id_especialidad}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_id_especialidad}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_id_especialidad}</span>
-						</div>
-		{END searchCtrlBlock_id_especialidad}
-																{BEGIN searchCtrlBlock_nombre}
+																		{BEGIN searchCtrlBlock_nombre}
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_nombre}" {$filterRow_attrs_nombre}>
@@ -557,45 +544,18 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$id_especialidad_class}
-			"
-
-			data-field="id_especialidad"
-	
-	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN id_especialidad_fieldheadercolumn}
-	{BEGIN id_especialidad_fieldheader}
-	<SPAN {$id_especialidad_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_especialidad">
-	{$label especialidades id_especialidad }	{$arrow_icon_id_especialidad}
-	</SPAN>
-	{END id_especialidad_fieldheader}
-{END id_especialidad_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field}
-				 
-					{BEGIN cellblock_grid_headcell_field1}
-	<th
-	
-	{$cell_grid_headcell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert				{$nombre_class}
 			"
 
 			data-field="nombre"
 	
-	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN nombre_fieldheadercolumn}
 	{BEGIN nombre_fieldheader}
-	<SPAN {$nombre_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nombre">
+	<SPAN {$nombre_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nombre">
 	{$label especialidades nombre }	{$arrow_icon_nombre}
 	</SPAN>
 	{END nombre_fieldheader}
@@ -603,7 +563,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field1}
+	{END cellblock_grid_headcell_field}
 							</tr>
 					 
 					 
@@ -768,35 +728,12 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$id_especialidad_class}
-			"
-
-			data-field="id_especialidad"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN id_especialidad_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_especialidad" >
-{$id_especialidad_value}
-</span>
-{END id_especialidad_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-				 
-					{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert				{$nombre_class}
 			"
 
 			data-field="nombre"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -806,7 +743,7 @@
 </span>
 {END nombre_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
+	{END cellblock_grid_cell_field}
 							</tr>
 					 
 						<tr {$rowattrs} {$row_grid_2} class="{$rowclass} 
@@ -918,22 +855,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field}
-				 
-					{BEGIN cellblock_grid_footcell_field1}
-	<td
-	
-	{$cell_grid_footcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="especialidades_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field1}
 							</tr>
 					
 					{END totals_row}

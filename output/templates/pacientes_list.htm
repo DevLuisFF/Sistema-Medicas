@@ -99,6 +99,12 @@
 									<span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu">
+								<li data-itemtype="edit_selected" data-itemid="edit_selected" {$item_edit_selected} data-pageid="{$pageid}" >
+				<a  href="#" {$editselectedlink_attrs} {$editselectedlink_span} >
+				
+		Editar los seleccionados		
+		</a>
+	</li>
 							{BEGIN exportselected_link}
 	<li data-itemtype="export_selected" data-itemid="export_selected" {$item_export_selected} data-pageid="{$pageid}" >
 				<a  href="#" {$exportselectedlink_attrs} {$exportselectedlink_span} >
@@ -259,33 +265,7 @@
 				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
 		</div>
 		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_id_paciente}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_id_paciente}" {$filterRow_attrs_id_paciente}>
-			<label>{$label pacientes id_paciente }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_id_paciente}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_id_paciente}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_id_paciente}</span>
-						</div>
-		{END searchCtrlBlock_id_paciente}
-																{BEGIN searchCtrlBlock_activo}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_activo}" {$filterRow_attrs_activo}>
-			<label>{$label pacientes activo }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_activo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_activo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_activo}</span>
-						</div>
-		{END searchCtrlBlock_activo}
-																{BEGIN searchCtrlBlock_direccion}
+																		{BEGIN searchCtrlBlock_direccion}
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_direccion}" {$filterRow_attrs_direccion}>
@@ -426,6 +406,14 @@
 							Cancel all			</a>
 </span>
 {END cancelall_link}
+	 
+		{BEGIN updateselected_link}
+<span data-itemtype="update_selected" data-itemid="update_selected" {$item_update_selected} data-pageid="{$pageid}" data-button-item>
+	<a type="button" class="btn btn-default   
+	" {$updateselectedlink_attrs} disabled >
+							actualización seleccionada			</a>
+</span>
+{END updateselected_link}
 			{END firstAboveGridCell}	
 	</div>			 
 				<div 
@@ -471,6 +459,16 @@
 		</div>
 	</div>
 	
+		<div class="row">
+		<div class="col-md-4">
+			&nbsp;
+		</div>
+		<div class="col-md-8">
+			<label style="color: gray;" for="printSelection{$id}">
+			<input name="printScope" disabled="disabled" id="printSelection{$id}" type="radio">
+			Imprimir la selección			</label>
+		</div>
+	</div>
 	</div>				</li>
 								<li class="divider" role="separator"></li>
 															 
@@ -574,6 +572,29 @@
 	</th>
 	{END cellblock_grid_headcell_icons}
 				 
+					{BEGIN cellblock_grid_headcell_checkbox}
+	<th
+	
+	{$cell_grid_headcell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_headcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="pacientes_list"	
+		data-checkbox-cell
+	>
+
+	 
+		{BEGIN checkbox_column}
+<span data-itemtype="grid_checkbox_head" data-itemid="grid_checkbox_head" {$item_grid_checkbox_head} data-pageid="{$pageid}" data-record-id="{$recId}" >
+	<input type="checkbox" {$checkboxheader_attrs}>
+</span>
+{END checkbox_column}
+	
+	</th>
+	{END cellblock_grid_headcell_checkbox}
+				 
 					{BEGIN cellblock_grid_headcell_details}
 	<th
 	
@@ -583,8 +604,7 @@
 		 r-ori-vert			"
 
 	
-	data-cellId="grid_headcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
-	
+	data-cellId="grid_headcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	
@@ -597,22 +617,22 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$id_paciente_class}
+		 r-ori-vert				{$nombre_class}
 			"
 
-			data-field="id_paciente"
+			data-field="nombre"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN id_paciente_fieldheadercolumn}
-	{BEGIN id_paciente_fieldheader}
-	<SPAN {$id_paciente_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_paciente">
-	{$label pacientes id_paciente }	{$arrow_icon_id_paciente}
+		{BEGIN nombre_fieldheadercolumn}
+	{BEGIN nombre_fieldheader}
+	<SPAN {$nombre_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nombre">
+	{$label pacientes nombre }	{$arrow_icon_nombre}
 	</SPAN>
-	{END id_paciente_fieldheader}
-{END id_paciente_fieldheadercolumn}
+	{END nombre_fieldheader}
+{END nombre_fieldheadercolumn}
 
 	
 	</th>
@@ -624,22 +644,22 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$nombre_class}
+		 r-ori-vert				{$apellido_class}
 			"
 
-			data-field="nombre"
+			data-field="apellido"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN nombre_fieldheadercolumn}
-	{BEGIN nombre_fieldheader}
-	<SPAN {$nombre_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nombre">
-	{$label pacientes nombre }	{$arrow_icon_nombre}
+		{BEGIN apellido_fieldheadercolumn}
+	{BEGIN apellido_fieldheader}
+	<SPAN {$apellido_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="apellido">
+	{$label pacientes apellido }	{$arrow_icon_apellido}
 	</SPAN>
-	{END nombre_fieldheader}
-{END nombre_fieldheadercolumn}
+	{END apellido_fieldheader}
+{END apellido_fieldheadercolumn}
 
 	
 	</th>
@@ -651,22 +671,22 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$apellido_class}
+		 r-ori-vert				{$fecha_nacimiento_class}
 			"
 
-			data-field="apellido"
+			data-field="fecha_nacimiento"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN apellido_fieldheadercolumn}
-	{BEGIN apellido_fieldheader}
-	<SPAN {$apellido_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="apellido">
-	{$label pacientes apellido }	{$arrow_icon_apellido}
+		{BEGIN fecha_nacimiento_fieldheadercolumn}
+	{BEGIN fecha_nacimiento_fieldheader}
+	<SPAN {$fecha_nacimiento_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fecha_nacimiento">
+	{$label pacientes fecha_nacimiento }	{$arrow_icon_fecha_nacimiento}
 	</SPAN>
-	{END apellido_fieldheader}
-{END apellido_fieldheadercolumn}
+	{END fecha_nacimiento_fieldheader}
+{END fecha_nacimiento_fieldheadercolumn}
 
 	
 	</th>
@@ -678,22 +698,22 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$fecha_nacimiento_class}
+		 r-ori-vert				{$telefono_class}
 			"
 
-			data-field="fecha_nacimiento"
+			data-field="telefono"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN fecha_nacimiento_fieldheadercolumn}
-	{BEGIN fecha_nacimiento_fieldheader}
-	<SPAN {$fecha_nacimiento_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fecha_nacimiento">
-	{$label pacientes fecha_nacimiento }	{$arrow_icon_fecha_nacimiento}
+		{BEGIN telefono_fieldheadercolumn}
+	{BEGIN telefono_fieldheader}
+	<SPAN {$telefono_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="telefono">
+	{$label pacientes telefono }	{$arrow_icon_telefono}
 	</SPAN>
-	{END fecha_nacimiento_fieldheader}
-{END fecha_nacimiento_fieldheadercolumn}
+	{END telefono_fieldheader}
+{END telefono_fieldheadercolumn}
 
 	
 	</th>
@@ -705,22 +725,22 @@
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$telefono_class}
+		 r-ori-vert				{$email_class}
 			"
 
-			data-field="telefono"
+			data-field="email"
 	
 	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN telefono_fieldheadercolumn}
-	{BEGIN telefono_fieldheader}
-	<SPAN {$telefono_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="telefono">
-	{$label pacientes telefono }	{$arrow_icon_telefono}
+		{BEGIN email_fieldheadercolumn}
+	{BEGIN email_fieldheader}
+	<SPAN {$email_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="email">
+	{$label pacientes email }	{$arrow_icon_email}
 	</SPAN>
-	{END telefono_fieldheader}
-{END telefono_fieldheadercolumn}
+	{END email_fieldheader}
+{END email_fieldheadercolumn}
 
 	
 	</th>
@@ -732,45 +752,18 @@
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$email_class}
-			"
-
-			data-field="email"
-	
-	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN email_fieldheadercolumn}
-	{BEGIN email_fieldheader}
-	<SPAN {$email_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="email">
-	{$label pacientes email }	{$arrow_icon_email}
-	</SPAN>
-	{END email_fieldheader}
-{END email_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field5}
-				 
-					{BEGIN cellblock_grid_headcell_field6}
-	<th
-	
-	{$cell_grid_headcell_field6}
-	{$recordattrs}
-	class="
 		 r-ori-vert				{$direccion_class}
 			"
 
 			data-field="direccion"
 	
-	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN direccion_fieldheadercolumn}
 	{BEGIN direccion_fieldheader}
-	<SPAN {$direccion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="direccion">
+	<SPAN {$direccion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="direccion">
 	{$label pacientes direccion }	{$arrow_icon_direccion}
 	</SPAN>
 	{END direccion_fieldheader}
@@ -778,34 +771,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field6}
-				 
-					{BEGIN cellblock_grid_headcell_field7}
-	<th
-	
-	{$cell_grid_headcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$activo_class}
-			"
-
-			data-field="activo"
-	
-	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN activo_fieldheadercolumn}
-	{BEGIN activo_fieldheader}
-	<SPAN {$activo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="activo">
-	{$label pacientes activo }	{$arrow_icon_activo}
-	</SPAN>
-	{END activo_fieldheader}
-{END activo_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field7}
+	{END cellblock_grid_headcell_field5}
 							</tr>
 					 
 					 
@@ -837,6 +803,28 @@
 	>
 
 	 
+		{BEGIN edit_column}
+{BEGIN edit_link}
+<span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-button-item>
+	<a type="button" class="btn-link   
+	 glyphicon glyphicon-pencil" href="pacientes_edit.php?{$editlink}" {$editlink_attrs} title="Editar" >		
+				
+								</a>
+</span>
+{END edit_link}
+{END edit_column}
+	 
+		{BEGIN inlineedit_column}
+{BEGIN inlineedit_link}
+<span data-itemtype="grid_inline_edit" data-itemid="grid_inline_edit" {$item_grid_inline_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-button-item>
+	<a type="button" class="btn-link   
+	 glyphicon glyphicon-edit" {$inlineeditlink_attrs} title="Editar" >		
+				
+								</a>
+</span>
+{END inlineedit_link}
+{END inlineedit_column}
+	 
 		{BEGIN inline_save}
 <span data-itemtype="grid_inline_save" data-itemid="grid_inline_save" {$item_grid_inline_save} data-pageid="{$pageid}" data-record-id="{$recId}" data-button-item>
 	<a type="button" class="btn-link   
@@ -854,9 +842,44 @@
 								</a>
 </span>
 {END inline_cancel}
+	 
+		{BEGIN view_column}
+{BEGIN view_link}
+<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-button-item>
+	<a type="button" class="btn-link   
+	 glyphicon glyphicon-search" href="pacientes_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
+				
+								</a>
+</span>
+{END view_link}
+{END view_column}
 	
 	</td>
 	{END cellblock_grid_cell_icons}
+				 
+					{BEGIN cellblock_grid_cell_checkbox}
+	<td
+	
+	{$cell_grid_cell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_cell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
+		data-checkbox-cell
+	>
+
+	 
+		{BEGIN checkbox_column}
+<span data-itemtype="grid_checkbox" data-itemid="grid_checkbox" {$item_grid_checkbox} data-pageid="{$pageid}" data-record-id="{$recId}" >
+	<input type="checkbox" {$checkbox_attrs}>
+</span>	
+{END checkbox_column}
+	
+	</td>
+	{END cellblock_grid_cell_checkbox}
 				 
 					{BEGIN cellblock_grid_cell_details}
 	<td
@@ -902,35 +925,12 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$id_paciente_class}
-			"
-
-			data-field="id_paciente"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN id_paciente_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_paciente" >
-{$id_paciente_value}
-</span>
-{END id_paciente_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-				 
-					{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert				{$nombre_class}
 			"
 
 			data-field="nombre"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -940,12 +940,12 @@
 </span>
 {END nombre_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
+	{END cellblock_grid_cell_field}
 				 
-					{BEGIN cellblock_grid_cell_field2}
+					{BEGIN cellblock_grid_cell_field1}
 	<td
 	
-	{$cell_grid_cell_field2}
+	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$apellido_class}
@@ -953,7 +953,7 @@
 
 			data-field="apellido"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -963,12 +963,12 @@
 </span>
 {END apellido_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field2}
+	{END cellblock_grid_cell_field1}
 				 
-					{BEGIN cellblock_grid_cell_field3}
+					{BEGIN cellblock_grid_cell_field2}
 	<td
 	
-	{$cell_grid_cell_field3}
+	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$fecha_nacimiento_class}
@@ -976,7 +976,7 @@
 
 			data-field="fecha_nacimiento"
 	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -986,12 +986,12 @@
 </span>
 {END fecha_nacimiento_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field3}
+	{END cellblock_grid_cell_field2}
 				 
-					{BEGIN cellblock_grid_cell_field4}
+					{BEGIN cellblock_grid_cell_field3}
 	<td
 	
-	{$cell_grid_cell_field4}
+	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$telefono_class}
@@ -999,7 +999,7 @@
 
 			data-field="telefono"
 	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1009,12 +1009,12 @@
 </span>
 {END telefono_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field4}
+	{END cellblock_grid_cell_field3}
 				 
-					{BEGIN cellblock_grid_cell_field5}
+					{BEGIN cellblock_grid_cell_field4}
 	<td
 	
-	{$cell_grid_cell_field5}
+	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$email_class}
@@ -1022,7 +1022,7 @@
 
 			data-field="email"
 	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1032,12 +1032,12 @@
 </span>
 {END email_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field5}
+	{END cellblock_grid_cell_field4}
 				 
-					{BEGIN cellblock_grid_cell_field6}
+					{BEGIN cellblock_grid_cell_field5}
 	<td
 	
-	{$cell_grid_cell_field6}
+	{$cell_grid_cell_field5}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$direccion_class}
@@ -1045,7 +1045,7 @@
 
 			data-field="direccion"
 	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1055,30 +1055,7 @@
 </span>
 {END direccion_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field6}
-				 
-					{BEGIN cellblock_grid_cell_field7}
-	<td
-	
-	{$cell_grid_cell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$activo_class}
-			"
-
-			data-field="activo"
-	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN activo_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="activo" >
-{$activo_value}
-</span>
-{END activo_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field7}
+	{END cellblock_grid_cell_field5}
 							</tr>
 					 
 						<tr {$rowattrs} {$row_grid_2} class="{$rowclass} 
@@ -1091,25 +1068,22 @@
 	{$cell_grid_cell_dpreview}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-				<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="citas,Citas_Asignadas"
-			data-details-citas			data-details-Citas_Asignadas	>
+			<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="citas"
+			data-details-citas	>
 		<span data-details-inside data-short-table="citas">
-			</span>
-		<span data-details-inside data-short-table="Citas_Asignadas">
 			</span>
 		<div data-details-preview>
 	</div>
 </div>
-	 
-			
+	
 	</td>
 	{END cellblock_grid_cell_dpreview}
 							</tr>
@@ -1145,6 +1119,22 @@
 	
 	</td>
 	{END cellblock_grid_footcell_icons}
+				 
+					{BEGIN cellblock_grid_footcell_checkbox}
+	<td
+	
+	{$cell_grid_footcell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_checkbox}
 				 
 					{BEGIN cellblock_grid_footcell_details}
 	<td
@@ -1257,38 +1247,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field5}
-				 
-					{BEGIN cellblock_grid_footcell_field6}
-	<td
-	
-	{$cell_grid_footcell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="pacientes_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field6}
-				 
-					{BEGIN cellblock_grid_footcell_field7}
-	<td
-	
-	{$cell_grid_footcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="pacientes_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field7}
 							</tr>
 					
 					{END totals_row}

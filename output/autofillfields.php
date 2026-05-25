@@ -17,7 +17,7 @@ $linkFieldVal = postvalue('linkFieldVal');
 $pageName = postvalue('page');
 $pageType = postvalue('pageType');
 
-if( $strTableName != "usuarios" )
+if( $strTableName != "admin_members" )
 {
 	if( !isLogged() )  
 		return;	

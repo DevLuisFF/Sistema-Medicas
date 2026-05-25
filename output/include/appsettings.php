@@ -628,11 +628,11 @@ $tableCaptions["Spanish"]["citas"] = "Citas";
 $tableCaptions["Spanish"]["especialidades"] = "Especialidades";
 $tableCaptions["Spanish"]["medicos"] = "Medicos";
 $tableCaptions["Spanish"]["pacientes"] = "Pacientes";
-$tableCaptions["Spanish"]["usuarios"] = "Usuarios";
 $tableCaptions["Spanish"]["admin_rights"] = "Admin Rights";
 $tableCaptions["Spanish"]["admin_members"] = "Admin Members";
 $tableCaptions["Spanish"]["admin_users"] = "Add/Edit users";
 $tableCaptions["Spanish"]["Citas_Asignadas"] = "Citas Asignadas";
+$tableCaptions["Spanish"]["usuarios"] = "Usuarios";
 
 
 $globalEvents = new class_GlobalEvents;

@@ -2614,6 +2614,8 @@ class ListPage extends RunnerPage
 	protected static function readMainTableSettingsFromRequest( $table )
 	{
 		$mainTableShortName = GetTableURL( postvalue("table") );
+		if( postvalue("pageType") == "register" )
+			$mainTableShortName = GetTableURL( "admin_members" );
 		return getLookupMainTableSettings($table, $mainTableShortName, postvalue("field"));
 	}
 
@@ -2630,6 +2632,11 @@ class ListPage extends RunnerPage
 			return true;
 		
 		//	otherwise check if the page is called from the register page
+		if( $mainTable == "admin_members" )
+		{
+			if( $lookupMainSettings->appearOnPage( postvalue("field") ) !== FALSE )
+				return true;
+		}
 		return false;
 	}
 	
